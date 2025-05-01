@@ -1,24 +1,70 @@
-# word-translation-project
+# Portfolio : Traduction et Scraping de Mots
 
-Create a French - English dictionnary - Composed by words common to both languages or almost. 
+## Description
 
-## Portfolio : Traduction et Scraping de Mots
+Ce projet scrape **136,764 mots anglais** depuis [Simple Wikipedia](https://simple.wikipedia.org/wiki/Wikipedia:BASIC_English_alphabetical_wordlist), les traduit en français par lots de **3,799 mots** avec `GoogleTranslator`, et sauvegarde les résultats en CSV. L’objectif est de créer une liste de mots **transparents** (similaires orthographiquement et sémantiquement) pour des textes lisibles par des anglophones. Ce projet est conçu comme un **portfolio** pour démontrer mes compétences en Python, scraping, et gestion de projets Git.
 
-### Description
+**Technologies** : Python, pandas, deep-translator, requests, BeautifulSoup, Git.
 
-Ce projet traduit 136,764 mots anglais en français pour créer une liste de mots **transparents** (similaires orthographiquement et sémantiquement) pour des textes lisibles par des anglophones. Les mots sont traduits par lots de 3,799 avec `GoogleTranslator` et sauvegardés en CSV. Les données proviennent d’un scraping de mots anglais.
+## Compétences démontrées
 
-### Compétences
+- **Python** : Gestion de données avec pandas, traduction par lots, scraping avec BeautifulSoup.
+- **Web Scraping** : Extraction et nettoyage de mots depuis Simple Wikipedia.
+- **Git/GitHub** : Commits, .gitignore, synchronisation avec VS Code.
+- **Architecture** : Organisation modulaire avec dossiers (`scripts/`, `source/`).
+- **Apprentissage** : Gestion des erreurs HTTP, authentification GitHub, structure de projet pro.
 
-- **Python** : Boucles, gestion d’erreurs, pandas, deep-translator.
-- **Git** : Commits, .gitignore, push vers GitHub.
-- **Scraping** : Collecte de données avec [outil, ex. requests/BeautifulSoup].
-- **Portfolio** : Documentation claire et publique.
+## Installation
 
-### Installation
+1. **Prérequis** : Python 3.8+, pip.
+2. Clonez le dépôt :
 
-1. Clonez le dépôt :
-
-   ``` bash
-   git clone https://github.com/Komaraa/word-translation-project/tree/main
+   ```bash
+   git clone https://github.com/Komaraa/word-translation-project.git
    ```
+
+3.Installez les dépendances:
+
+```bash
+pip install -r requirements.txt
+```
+
+## Utilisation
+
+- Scraper les mots français :
+
+```bash
+python scripts/ScrapingToutFrancais.py
+```
+
+Sortie : source/french_words.txt (mot uniques)
+
+- Traduire en anglais / en francais :
+
+```bash
+python scripts/translate.py
+```
+
+Sortie: translation_lot_X.csv (lots) et translations.csv (global).
+
+## Structure du dépôt
+
+- scripts/ : Scripts Python (translate.py, scrape_words.py).
+- source/ : Données brutes (ignorées via .gitignore).
+- requirements.txt : Dépendances du projet.
+- .gitignore : Exclut les fichiers temporaires et données.
+- README.md : Documentation du projet.
+
+Cette structure est conçue pour être modulaire et propre, avec des données brutes séparées du code pour un dépôt léger.
+
+## Progrès
+
+- [x] Scraper les mots anglais depuis Simple Wikipedia.
+- [x] Traduire par lots de 3,799 mots avec GoogleTranslator.
+- [x] Sauvegarder les traductions en CSV avec pandas.
+- [] Comparer les mots anglais/français avec Jaro-Winkler ou Levenshtein.
+- [] Ajouter des tests unitaires dans tests/.
+
+## Contact 
+- GitHub:[Komara](https://github.com/Komaraa)
+- Email: [steve.haidara@gmail.com]
