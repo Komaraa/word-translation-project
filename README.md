@@ -65,6 +65,7 @@ Cette structure est conçue pour être modulaire et propre, avec des données br
 - [] Comparer les mots anglais/français avec Jaro-Winkler ou Levenshtein.
 - [] Ajouter des tests unitaires dans tests/.
 
-## Contact 
+## Contact
+
 - GitHub:[Komara](https://github.com/Komaraa)
 - Email: [steve.haidara@gmail.com]
